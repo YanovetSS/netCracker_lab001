@@ -5,7 +5,6 @@ import netcracker.Lab01.fillers.FillersImpl;
 import netcracker.Lab01.fillers.annotations.Filler;
 import netcracker.Lab01.sorters.impl.AbstractSorter;
 
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;

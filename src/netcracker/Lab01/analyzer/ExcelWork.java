@@ -38,8 +38,8 @@ public class ExcelWork {
      * @throws IOException
      */
     public static XSSFWorkbook getWorkBook() throws IOException {
-        XSSFWorkbook wb = new XSSFWorkbook("D:\\Навчання!\\NetCracker\\Laba1\\true.xlsx");
-        FileOutputStream fos = new FileOutputStream("D:\\Навчання!\\NetCracker\\Laba1\\excel.xlsx");
+        XSSFWorkbook wb = new XSSFWorkbook("true.xlsx");
+        FileOutputStream fos = new FileOutputStream("excel.xlsx");
         wb.write(fos);
         fos.close();
         return wb;
@@ -53,7 +53,7 @@ public class ExcelWork {
      * @throws IOException
      */
     public void printTableExcel(Map<Integer, List<InnerResults>> results) throws IOException {
-        FileOutputStream fos = new FileOutputStream("D:\\Навчання!\\NetCracker\\Laba1\\excel.xlsx");
+        FileOutputStream fos = new FileOutputStream("excel.xlsx");
         int iniColumn = 4;
         for (Map.Entry<Integer, List<InnerResults>> result : results.entrySet()) {
             int columnCount = iniColumn;
@@ -104,7 +104,7 @@ public class ExcelWork {
      */
     public void printGraphExcel(int sheetCount, Map<Integer, List<InnerResults>> map) throws IOException, NoSuchMethodException, InstantiationException,
             IllegalAccessException, InvocationTargetException {
-        FileOutputStream fos = new FileOutputStream("D:\\Навчання!\\NetCracker\\Laba1\\excel.xlsx");
+        FileOutputStream fos = new FileOutputStream("excel.xlsx");
         XSSFFormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();
         for (int i = 0; i < sheetCount; i++) {
             XSSFSheet sheet = workbook.getSheetAt(i);
@@ -142,7 +142,7 @@ public class ExcelWork {
      * @throws IOException
      */
     public void getCellValue(int pRow, int pCol) throws IOException {
-        FileInputStream fos = new FileInputStream("D:\\Навчання!\\NetCracker\\Laba1\\excel.xlsx");
+        FileInputStream fos = new FileInputStream("excel.xlsx");
         workbook = new XSSFWorkbook(fos);
         XSSFSheet sheet = workbook.getSheetAt(1);
         XSSFFormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();

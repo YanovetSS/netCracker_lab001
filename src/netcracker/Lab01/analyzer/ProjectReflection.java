@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  *
  * @author Nazar Yanovets
  * @version 1.0
- * @see Reflections
+ * @see Reflection
  * @see Class
  * @see java.util.stream.Collectors
  * @since 1.8
