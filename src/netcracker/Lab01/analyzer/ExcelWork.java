@@ -141,7 +141,7 @@ public class ExcelWork {
      *
      * @throws IOException
      */
-    public void getCellValue(int pRow, int pCol) throws IOException {
+    public CellValue getCellValue(int pRow, int pCol) throws IOException {
         FileInputStream fos = new FileInputStream("excel.xlsx");
         workbook = new XSSFWorkbook(fos);
         XSSFSheet sheet = workbook.getSheetAt(1);
@@ -165,6 +165,7 @@ public class ExcelWork {
             case Cell.CELL_TYPE_ERROR:
                 break;
         }
+        return cellValue;
     }
 }
 

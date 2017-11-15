@@ -56,7 +56,7 @@ public class FillersImpl implements Fillers {
         for (int i = 0; i < sortedIntArrayWithRandomNumericOnEnd.length; i++) {
             sortedIntArrayWithRandomNumericOnEnd[i] = i + 1;
         }
-        sortedIntArrayWithRandomNumericOnEnd[size - 1] = -20000000;
+        sortedIntArrayWithRandomNumericOnEnd[size - 1] = 200000;
         return sortedIntArrayWithRandomNumericOnEnd;
     }
 
@@ -86,7 +86,6 @@ public class FillersImpl implements Fillers {
             m[m.length - i - 1] = tmp;
         }
         return m;
-
     }
 
     /**
