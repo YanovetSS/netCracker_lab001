@@ -46,9 +46,12 @@ public class Analyzer {
         long timeDiff;
         Map<Integer, List<InnerResults>> map = new LinkedHashMap<>();
 
+
         while (true) {
             List<InnerResults> results = new LinkedList<>();
+            System.out.println("For exit program, write array size = -1");
             System.out.print("Hello, enter array size() : -> ");
+
             Scanner in = new Scanner(System.in);
             arraySize = in.nextInt();
             if (arraySize == -1) {
@@ -67,7 +70,7 @@ public class Analyzer {
                     method1.invoke(object, array);
                     endTime = System.nanoTime();
                     timeDiff = endTime - startTime;
-                    System.out.println("        sotring time : " + timeDiff);
+                    System.out.println("        Sotring time : " + timeDiff);
                     arrayList.add(timeDiff);
 
                 }
@@ -110,7 +113,7 @@ public class Analyzer {
                 System.out.println("Key: " + entry.getKey() + " Value: "
                         + entry.getValue());
             }
-            System.out.println("Rozmer innerMAp: " + innerMap.size());
+            System.out.println("InnerMap size: " + innerMap.size());
         }
     }
 }

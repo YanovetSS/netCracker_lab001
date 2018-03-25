@@ -26,12 +26,12 @@ public class Runner {
             NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
         init();
         Analyzer nw = new Analyzer();
+
         ExcelWork excelWork = new ExcelWork();
         ProjectReflection ref = new ProjectReflection();
         Map<Integer, List<InnerResults>> map = nw.getAnalyzerMapTime();
         excelWork.printTableExcel(map);
         excelWork.printGraphExcel(ref.getListSizeWhereWeHaveMethodWhoAnnotatedFiller(FillersImpl.class, Filler.class), map);
-
 
     }
 
